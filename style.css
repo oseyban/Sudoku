@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+}
+
+.card {
+  width: 40%; 
+  align-items: center;
+  
+}
+
+.card-header, .card-footer {
+  text-align: center; 
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 0; 
+  width: 100%; 
+  background-color:bisque;
+  color:steelblue
+}
+
+.card-footer {
+  font-size: 14px; 
+  font-style: italic; 
+  color:tomato 
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0; 
+  border: 3px solid black; 
+  width: 500px; 
+}
+
+.sudoku-cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border: 0.5px solid lightgray; 
+}
+
+.sudoku-section {
+  border: 2px solid black; /* 3x3'lük alanların dış çizgisi */
+}
+
+/* 3x3'lük alanların dış kenarlarına kalın çizgi eklemek için */
+.sudoku-cell:nth-child(3n) {
+  border-right: 2px solid black;
+}
+
+.sudoku-cell:nth-child(3n+1) {
+  border-left: 2px solid black;
+}
+
+.sudoku-cell:nth-child(1) {
+  border-top: 2px solid black;
+}
+
+.sudoku-cell:nth-child(9) {
+  border-bottom: 2px solid black;
+}
+
+/* İlk ve son satırların üst ve alt kenarlarına kalın çizgi eklemek için */
+.sudoku-cell:nth-of-type(1),
+.sudoku-cell:nth-of-type(2),
+.sudoku-cell:nth-of-type(3),
+.sudoku-cell:nth-of-type(10),
+.sudoku-cell:nth-of-type(11),
+.sudoku-cell:nth-of-type(12),
+.sudoku-cell:nth-of-type(19),
+.sudoku-cell:nth-of-type(20),
+.sudoku-cell:nth-of-type(21) {
+  border-top: 2px solid black;
+}
+
+.sudoku-cell:nth-of-type(61),
+.sudoku-cell:nth-of-type(62),
+.sudoku-cell:nth-of-type(63),
+.sudoku-cell:nth-of-type(70),
+.sudoku-cell:nth-of-type(71),
+.sudoku-cell:nth-of-type(72),
+.sudoku-cell:nth-of-type(79),
+.sudoku-cell:nth-of-type(80),
+.sudoku-cell:nth-of-type(81) {
+  border-bottom: 2px solid black;
+}
+
+.sudoku-cell:nth-of-type(1),
+.sudoku-cell:nth-of-type(2),
+.sudoku-cell:nth-of-type(3),
+.sudoku-cell:nth-of-type(10),
+.sudoku-cell:nth-of-type(11),
+.sudoku-cell:nth-of-type(12),
+.sudoku-cell:nth-of-type(19),
+.sudoku-cell:nth-of-type(20),
+.sudoku-cell:nth-of-type(21) {
+  border-top: 2px solid black;
+}
+
